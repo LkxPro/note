@@ -1,0 +1,69 @@
+Let's walk through each part of the hypothesis testing problem step by step:
+
+---
+
+### **a) What hypotheses should be tested?**
+
+We are testing whether the new engine has a longer average lifetime than the old model (225,000 miles).
+
+* **Null hypothesis (H₀):** μ = 225,000 (no improvement)
+* **Alternative hypothesis (H₁):** μ > 225,000 (engine lifetime has increased)
+
+This is a **one-tailed test (right-tailed)**.
+
+---
+
+### **b) Find the probability of a Type I error (α)**
+
+The Type I error occurs when we reject the null hypothesis even though it's true.
+
+We are given:
+
+* Population mean under H₀: μ = 225,000
+* Standard deviation: σ = 40,000
+* Sample size: n = 16
+* Rejection region: $\bar{X} \geq 250,000$
+
+We find the z-score corresponding to the sample mean 250,000:
+
+$$
+z = \frac{250,000 - 225,000}{\frac{40,000}{\sqrt{16}}} = \frac{25,000}{10,000} = 2.5
+$$
+
+Using the standard normal distribution table:
+
+$$
+P(Z \geq 2.5) = 1 - P(Z \leq 2.5) = 1 - 0.9938 = 0.0062
+$$
+
+**Answer:** The probability of a Type I error is **0.0062**
+
+---
+
+### **c) Find the probability of a Type II error (β)**
+
+Now suppose that the **true mean is actually 230,000**, with a **standard deviation of 60,000**, and we still use the same rejection region ($\bar{X} \geq 250,000$).
+
+We want:
+
+$$
+\beta = P(\bar{X} < 250,000 \mid \mu = 230,000, \sigma = 60,000)
+$$
+
+Find the z-score for $\bar{X} = 250,000$ under this **new distribution**:
+
+$$
+z = \frac{250,000 - 230,000}{\frac{60,000}{\sqrt{16}}} = \frac{20,000}{15,000} = 1.3333
+$$
+
+From the z-table:
+
+$$
+P(Z < 1.3333) \approx 0.9082
+$$
+
+**Answer:** The probability of a Type II error is **0.9082**
+
+---
+
+Let me know if you’d like to visualize this with a diagram or if you want help calculating power.
